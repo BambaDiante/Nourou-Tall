@@ -73,7 +73,7 @@
             max-width: 600px; 
             margin: 20px auto;
             padding: 15px;
-            font-size: clamp(1.5rem, 4vw, 2.5rem); /* ✅ Taille responsive */
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
         }
 
         /* Formulaire responsive */
@@ -93,7 +93,7 @@
         /* Labels */
         label {
             font-family: Impact, sans-serif;
-            font-size: clamp(1rem, 3vw, 1.5rem); /* ✅ Responsive */
+            font-size: clamp(1rem, 3vw, 1.5rem); 
             color: black;
             margin-top: 10px;
         }
@@ -119,7 +119,7 @@
         input[type="date"],
         input[type="tel"] {
             width: 100%;
-            padding: 15px 15px 15px 50px; /* ✅ Espace pour l'icône */
+            padding: 15px 15px 15px 50px; 
             border: 1px solid #ccc;
             border-radius: 10px;
             font-size: 1rem;
