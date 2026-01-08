@@ -93,6 +93,7 @@
             margin: 20px auto;
             padding: 20px;
             gap: 15px;
+        }
 
         /* Labels */
         label {
