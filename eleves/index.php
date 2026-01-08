@@ -73,7 +73,12 @@
             max-width: 600px; 
             margin: 20px auto;
             padding: 15px;
-            font-size: clamp(1.5rem, 4vw, 2.5rem); /* ✅ Taille responsive */
+            font-size: clamp(1.5rem, 4vw, 2.5rem); 
+            /* clamp est une fonction css qui permet de gerer la responsivite 
+            du format clamp(vmin,videal,vmax)
+            avec vmin la valeur minimal 
+            vmax la valeur maximal 
+            et videal la valeur responsive (4vw c'est 4% de la largeur de la fenetre) */
         }
 
         /* Formulaire responsive */
@@ -87,13 +92,12 @@
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
-            gap: 15px; /* ✅ Espacement uniforme */
-        }
+            gap: 15px;
 
         /* Labels */
         label {
             font-family: Impact, sans-serif;
-            font-size: clamp(1rem, 3vw, 1.5rem); /* ✅ Responsive */
+            font-size: clamp(1rem, 3vw, 1.5rem);
             color: black;
             margin-top: 10px;
         }
@@ -119,7 +123,7 @@
         input[type="date"],
         input[type="tel"] {
             width: 100%;
-            padding: 15px 15px 15px 50px; /* ✅ Espace pour l'icône */
+            padding: 15px 15px 15px 50px; 
             border: 1px solid #ccc;
             border-radius: 10px;
             font-size: 1rem;
