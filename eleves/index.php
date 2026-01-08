@@ -2,6 +2,20 @@
     require_once "../configuration/connexion.php"
 ?>
 <?php
+    if(isset($_POST['prenom'],$_POST['nom'],$_POST['mdp'],$_POST['date'],$_POST['lieu'],$_POST['adresse'],$_POST['telp'],$_POST['tele'])){
+        //insertion des informations
+        $insertion="INSERT INTO eleves(prenom,nom,adresse,date_nais,lieu_nais,num-eleve,num-tuteur) VALUES (:prenom,:nom,:adresse,:date_nais,:lieu_nais,:num-eleve,:num-tuteur)";
+        $eleve=$pdo->prepare($insertion);
+        $eleve=$eleve->execute([
+            ':prenom'=>$_POST(['prenom']),
+            ':nom'=>$_POST(['nom']),
+            ':adresse'=>$_POST(['adresse']),
+            ':date_nais'=>$_POST(['date']),
+            ':lieu_nais'=>$_POST(['lieu']),
+            ':num-eleve'=>$_POST(['tele']),
+            ':num-tuteur'=>$_POST(['telp']),
+        ]);
+    }
     
 ?>
 <!DOCTYPE html>
@@ -24,7 +38,7 @@
         }
         /* La piste du scroll */
         ::-webkit-scrollbar-track {
-            background: #363b3b;
+            background: white;
             border-radius: 10px;
         }
         /* la barre de scroll */
@@ -217,11 +231,16 @@
 </head>
 <body>
     <h1>Formulaire d'inscription</h1>
-    <form action="admin.php" method="POST">
-        <label for="login">Nom d'utilisateur:</label>  
+    <form action="index.php" method="POST">
+        <label for="prenom">Prenom de l'eleve:</label>  
         <div class="input-with-icon">
             <img src="../images/login.png" alt="Icone login" class="input-icon">
-            <input type="text" name="login" class="champ" placeholder="Nom de l'eleve" required>
+            <input type="text" name="prenom" class="champ" placeholder="Prenom de l'eleve" required>
+        </div>
+        <label for="nom">Nom de l'eleve:</label>  
+        <div class="input-with-icon">
+            <img src="../images/login.png" alt="Icone login" class="input-icon">
+            <input type="text" name="nom" class="champ" placeholder="Nom de l'eleve" required>
         </div>
         
         <label for="pass">Mot de passe:</label>  
@@ -247,7 +266,7 @@
         <input type="tel" name="telp" placeholder="771234567" required>
         
         <label for="tele">Numero de telephone de l'eleve</label>
-        <input type="tel" name="tele" placeholder="771234567">
+        <input type="tel" name="tele" placeholder="771234567(facultatif)">
         
         <input type="submit" class="submit" value="M'inscrire" id="button">     
     </form>
