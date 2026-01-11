@@ -1,0 +1,1 @@
+This project aims to create a comprehensive school management website with multi-level user roles including students, teachers, administrators, and the director, each with specific permissions. Cur… 
