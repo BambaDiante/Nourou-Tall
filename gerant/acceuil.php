@@ -9,20 +9,12 @@
     <title>Acceuil</title>
 </head>
 <body>
-    <header>
-        <!-- 🔹 Conteneur pour logo + texte -->
-        <div class="logo-section">
-            <a href="./index.php"><img src="../assets/images/babamaillot.jpg" alt="Logo Baba Maillot" id="logo"></a>
-            <a href="./index.php" style="text-decoration: none;"><p id="baba">Baba Maillot</p></a>
-        </div>
-        <div class="menu-icon" id="menuBtn" aria-label="Ouvrir le menu">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-    </header>
-    <nav id="menu">
-        <button class="close-btn" id="closeMenu" aria-label="Fermer le menu">×</button>
+    <nav>
+        <ul>
+            <a href="add.php"><li>Creer une Annonce</li></a>
+            <a href="updatde.php"><li>Modifier une Annonce</li></a>
+            <a href="deleten.php"><li>Supprimer une Annonce</li></a>
+        </ul>
     </nav>
 </body>
 </html>
