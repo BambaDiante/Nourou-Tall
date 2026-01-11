@@ -7,7 +7,7 @@
 </head>
 <body>
     <form action="add.php">
-        
+        <label for="title">Titre de l'annonce</label>
     </form>
 </body>
 </html>
